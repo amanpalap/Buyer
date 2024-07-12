@@ -1,48 +1,49 @@
 'use client'
 import React, { useState } from 'react';
+import { Clock, Trophy, CircleCheckBig, Heart } from 'lucide-react';
 
 export default function ProductPage() {
     const [imageSrc, setImageSrc] = useState('https://placehold.co/550x400?text=Image+1');
     const [selectedBlock, setSelectedBlock] = useState(0);
 
-    const handleImageChange = (newSrc, index) => {
+    const handleImageChange = (newSrc: React.SetStateAction<string>, index: React.SetStateAction<number>) => {
         setImageSrc(newSrc);
         setSelectedBlock(index);
     };
 
     return (
-        <div class="bg-background text-foreground py-10">
-            <div class="text-center mb-6">
-                <p class="text-accent mb-2">EXPERTS GROWTH</p>
-                <h2 class="text-3xl font-bold">OUR COMPANY GROWTH</h2>
+        <div className="w-full py-14 px-28">
+            <div className="text-center w-full mb-10">
+                <p className="text-accent text-xl font-semibold text-red-500 mb-6">EXPERTS GROWTH</p>
+                <h2 className="text-3xl font-bold">OUR COMPANY GROWTH</h2>
             </div>
-            <div class="flex justify-center space-x-4">
-                <div class="bg-card text-card-foreground p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col items-center">
-                        <img aria-hidden="true" alt="heart-icon" src="https://openui.fly.dev/openui/24x24.svg?text=❤️" class="mb-2" />
-                        <p class="text-4xl font-bold">199 +</p>
-                        <p class="text-muted-foreground">Statified Customers</p>
+            <div className="flex justify-center w-full px-28 space-x-4">
+                <div className="bg-card w-1/5 p-6 hover:scale-110 hover:bg-red-500 hover:text-white transition-scale duration-300 rounded-lg shadow-lg">
+                    <div className="flex flex-col gap-y-2 items-center">
+                        <Heart strokeWidth={3} absoluteStrokeWidth />
+                        <p className="text-4xl font-bold">199 +</p>
+                        <p className="">Statified Customers</p>
                     </div>
                 </div>
-                <div class="bg-card text-card-foreground p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col items-center">
-                        <img aria-hidden="true" alt="clock-icon" src="https://openui.fly.dev/openui/24x24.svg?text=🕒" class="mb-2" />
-                        <p class="text-4xl font-bold">1591+</p>
-                        <p class="text-muted-foreground">Days Of Operation</p>
+                <div className="bg-card w-1/5 p-6 hover:scale-110 hover:bg-red-500 hover:text-white transition-scale duration-300 rounded-lg shadow-lg">
+                    <div className="flex flex-col gap-y-2 items-center">
+                        <Clock strokeWidth={3} />
+                        <p className="text-4xl font-bold">1591+</p>
+                        <p className="">Days Of Operation</p>
                     </div>
                 </div>
-                <div class="bg-card text-card-foreground p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col items-center">
-                        <img aria-hidden="true" alt="check-icon" src="https://openui.fly.dev/openui/24x24.svg?text=✔️" class="mb-2" />
-                        <p class="text-4xl font-bold">283 +</p>
-                        <p class="text-muted-foreground">Complete Project</p>
+                <div className="bg-card w-1/5 p-6 hover:scale-110 hover:bg-red-500 hover:text-white transition-scale duration-300 rounded-lg shadow-lg">
+                    <div className="flex flex-col items-center gap-y-2">
+                        <CircleCheckBig strokeWidth={3} />
+                        <p className="text-4xl font-bold">283 +</p>
+                        <p className="">Complete Project</p>
                     </div>
                 </div>
-                <div class="bg-card text-card-foreground p-6 rounded-lg shadow-md">
-                    <div class="flex flex-col items-center">
-                        <img aria-hidden="true" alt="trophy-icon" src="https://openui.fly.dev/openui/24x24.svg?text=🏆" class="mb-2" />
-                        <p class="text-4xl font-bold">75+</p>
-                        <p class="text-muted-foreground">Win Awards</p>
+                <div className="bg-card w-1/5 p-6 hover:scale-110 hover:bg-red-500 hover:text-white transition-scale duration-300 rounded-lg shadow-lg">
+                    <div className="flex flex-col items-center gap-y-2">
+                        <Trophy strokeWidth={3} />
+                        <p className="text-4xl font-bold">75+</p>
+                        <p className="">Win Awards</p>
                     </div>
                 </div>
             </div>

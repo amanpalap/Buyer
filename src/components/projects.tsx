@@ -11,8 +11,8 @@ export default function ProjectsPage() {
     };
 
     return (
-        <div className="flex flex-wrap items-center min-h-screen py-10 px-28">
-            <p className="text-red-500 w-full text-center mt-10 font-semibold uppercase">Our Project</p>
+        <div className="flex flex-wrap items-center min-h-screen py-14 px-28">
+            <p className="text-red-500 w-full text-xl text-center font-semibold uppercase">Our Project</p>
             <h2 className="text-4xl w-full font-bold text-center ">Why We Are Best</h2>
             <div className="flex flex-wrap w-full gap-x-4 h-max md:flex-row items-center md:items-start">
                 <div className='w-3/5 h-max'>

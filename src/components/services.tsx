@@ -22,10 +22,10 @@ export default function ServicesPage() {
     ];
 
     return (
-        <div className="grid items-center px-20 border-2 justify-center min-h-screen w-full">
+        <div className="grid items-center px-28 py-14 justify-center min-h-screen w-full">
             <div className="w-full flex flex-wrap justify-center">
-                <div className="text-start w-full lg:w-3/4">
-                    <h2 className="text-red-500 text-lg mb-10 font-semibold">WHAT WE DO</h2>
+                <div className="text-start w-full">
+                    <h2 className="text-red-500 text-lg mb-10 font-semibold ml-4" >WHAT WE DO</h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center p-4">
                         <h1 className="text-4xl font-bold">SERVICES PROVIDE FOR YOU</h1>
                         <p className="text-muted-foreground mt-4">
