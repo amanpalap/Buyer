@@ -1,4 +1,10 @@
 import * as React from "react";
+import Image from "next/image";
+import a from '@/images/1-1@2x.png';
+import b from '@/images/2-1@2x.png';
+import c from '@/images/3-1@2x.png';
+import { AppWindow } from 'lucide-react'
+
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -10,22 +16,27 @@ import {
 } from "@/components/ui/carousel";
 
 export default function ServicesPage() {
-    const ratio = 1 / 4;
+    const divitem = <div className="grid w-full items-center justify-center text-center gap-y-4">
+        <div className="grid mx-auto"><AppWindow size={48} /></div>
+        <h1>WEB DEVELOPMENT</h1>
+        <p className="font-light text-sm">Web development is the work involved in developing a website for the Internet </p>
+        <span><button className="text-sm text-red-500 bg-white w-40 py-2 mt-10">Read More ---> </button></span>
+    </div>
     const items = [
-        { imageSrc: "https://placehold.co/300x450", text: "Service 1" },
-        { imageSrc: "https://placehold.co/300x450", text: "Service 2" },
-        { imageSrc: "https://placehold.co/300x450", text: "Service 3" },
-        { imageSrc: "https://placehold.co/300x450", text: "Service 4" },
-        { imageSrc: "https://placehold.co/300x450", text: "Service 5" },
-        { imageSrc: "https://placehold.co/300x450", text: "Service 6" },
-        { imageSrc: "https://placehold.co/300x450", text: "Service 7" },
+        { imageSrc: a, text: divitem },
+        { imageSrc: b, text: divitem },
+        { imageSrc: c, text: divitem },
+        { imageSrc: a, text: divitem },
+        { imageSrc: b, text: divitem },
+        { imageSrc: c, text: divitem },
+        { imageSrc: a, text: divitem },
     ];
 
     return (
-        <div className="grid items-center px-28 py-14 justify-center min-h-screen w-full">
+        <div className="grid items-center px-4 py-14 md:px-28 min-h-screen w-full bg-slate-100">
             <div className="w-full flex flex-wrap justify-center">
                 <div className="text-start w-full">
-                    <h2 className="text-red-500 text-lg mb-10 font-semibold ml-4" >WHAT WE DO</h2>
+                    <h2 className="text-red-500 text-lg mb-10 font-semibold ml-4">WHAT WE DO</h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center p-4">
                         <h1 className="text-4xl font-bold">SERVICES PROVIDE FOR YOU</h1>
                         <p className="text-muted-foreground mt-4">
@@ -34,14 +45,18 @@ export default function ServicesPage() {
                     </div>
                 </div>
             </div>
-            <div className="grid items-center justify-center w-full mt-10">
-                <Carousel className="bg-white">
-                    <CarouselContent className="flex -ml-1 space-x-2">
+            <div className="grid items-center justify-center w-full mt-10 bg-slate-100">
+                <Carousel className="w-full max-w-screen-lg bg-slate-100">
+                    <CarouselContent className="flex -ml-1 space-x-2 ">
                         {items.map((item, index) => (
-                            <CarouselItem key={index} className="flex-none">
-                                <div className="relative group">
-                                    <img src={item.imageSrc} alt={`Service ${index + 1}`} className="rounded-lg shadow-lg transition-opacity duration-300 group-hover:opacity-0" />
-                                    <div className="absolute inset-0 flex items-center justify-center bg-gray-800 text-white text-lg font-semibold rounded-lg shadow-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <CarouselItem key={index} className="flex-none bg-slate-100">
+                                <div className="relative group w-80">
+                                    <Image
+                                        src={item.imageSrc}
+                                        alt={`Service ${index + 1}`}
+                                        className="rounded-lg shadow-lg transition-opacity duration-300 group-hover:opacity-75"
+                                    />
+                                    <div className="absolute h-full inset-0 flex items-center justify-center bg-red-500 text-white text-lg font-semibold rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         {item.text}
                                     </div>
                                 </div>
