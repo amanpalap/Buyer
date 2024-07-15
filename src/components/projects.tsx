@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import a from '@/images/image@2x.png'
 import b from '@/images/1.jpg'
 import c from '@/images/2.jpg'
@@ -33,7 +33,7 @@ export default function ProjectsPage() {
     const [imageSrc, setImageSrc] = useState(projects[0].imgSrc);
     const [selectedBlock, setSelectedBlock] = useState(0);
 
-    const handleImageChange = (newSrc, index) => {
+    const handleImageChange = (newSrc: React.SetStateAction<StaticImageData>, index: React.SetStateAction<number>) => {
         setImageSrc(newSrc);
         setSelectedBlock(index);
     };

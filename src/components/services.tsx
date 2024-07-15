@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <div className="grid mx-auto"><AppWindow size={48} /></div>
         <h1>WEB DEVELOPMENT</h1>
         <p className="font-light text-sm">Web development is the work involved in developing a website for the Internet </p>
-        <span><button className="text-sm text-red-500 bg-white w-40 py-2 mt-10">Read More ---> </button></span>
+        <span><button className="text-sm text-red-500 bg-white w-40 py-2 mt-10">Read More &rarr; </button></span>
     </div>
     const items = [
         { imageSrc: a, text: divitem },
