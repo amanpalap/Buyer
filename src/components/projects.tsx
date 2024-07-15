@@ -85,7 +85,7 @@ export default function ProjectsPage() {
                         {projects.map((project, index) => (
                             <div
                                 key={index}
-                                className={`py-6 h-32 px-4 shadow-md cursor-pointer ${selectedBlock === index ? 'bg-red-500 text-white' : 'bg-slate-100'}`}
+                                className={`py-4 h-32 px-4  shadow-md cursor-pointer ${selectedBlock === index ? 'bg-red-500 text-white' : 'bg-slate-100'}`}
                                 onClick={() => handleImageChange(project.imgSrc, index)}
                             >
                                 <h3 className="text-lg font-semibold">{project.title}</h3>
